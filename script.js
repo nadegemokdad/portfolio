@@ -26,7 +26,7 @@ form.addEventListener("submit", function(e) {
 });*/
 
 // portfolio: affichage "progressif" 
-/*let aff_bloc = document.getElementsByClassName("aff_img");
+let aff_bloc = document.getElementsByClassName("aff_img");
 console.log(aff_bloc);
 let aff_all = document.getElementsByClassName("lien_img");
 let mess_1 = document.getElementById("text1");
@@ -53,12 +53,12 @@ mess_1.classList.add('changmt_texte');
 let burger = document.getElementsByClassName("icon");
 burger.addEventListener("click",function(){
   aff_menu.classList.toggle("nav_resp");
-  });*/
+  });
   let click_burger =document.getElementById('icon');
   let menu = document.getElementById("nav_resp");
   click_burger.addEventListener("click", function(){
   menu.classList.toggle("display_flex");
-  });
+  });*/
 
 
  

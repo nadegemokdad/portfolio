@@ -20,7 +20,7 @@
     <p class="intro_portfolio">Voici un apperçu des differents projets effetués au sein de l'Access Code School, réalisés en goupe ou individuellement</p>
     <div class=" zone_img">
     <div class="img_min">
-      <img src="img/logo.png" alt=" logo" class=" effet_img">
+      <img src="img/logo.png" alt=" logo" >
     </div>
     <div class="img_min">
       <img src="img/langerba.png" alt=" miniature maquette" >
@@ -40,7 +40,7 @@
       </div>
       </div>
       <div class="lien_img">
-    <p id="text1" class="changmt_texte">Voir toutes les images </p>
+    <p id="text1" class="changmt_texte"> Apperçu de tous les projets</p>
     
   </div>
   </section>

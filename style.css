@@ -51,20 +51,201 @@ body
 {
 font-family: 'Poppins', sans-serif;
 }
-/* header*/
-.navbar
-{
-width: 100%;  
-background-color: black;
-align-items: flex-start;
+
+/********************
+**    index        **
+********************/
+
+/* fond animé*/
+
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background: linear-gradient(45deg,   #cab7dbfb,#e4a1b034);
+  background-size: 400% 400%;
+  animation: gradient 40s ease infinite;
 }
 
-h2
-{
-  font-size: 2rem;
-
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.bgTop {
+  z-index: 3;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 2;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 1;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
 }
 
+/* texte*/
+
+h1, .categories_index
+{
+position: relative;
+margin-bottom : 5%;
+z-index: 5;
+
+}
+h1
+{
+font-size: 4rem;
+text-align:center;
+top: 12vh;
+opacity:0;
+animation: apparition 1.5s ease-in-out 1s forwards;
+}
+
+
+
+
+.container_index
+{
+
+text-align: center;
+margin-top : 10% ;
+}
+
+
+
+.categories_index
+{ 
+
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-size: 2.rem;
+}
+
+
+
+
+
+
+
+.lien_centre
+{
+  width: 100%;
+}
+#lien_competences, #lien_portfolio
+{
+text-align:center;
+writing-mode: vertical-lr;
+text-orientation: upright;
+margin: 1% 18%;
+
+}
+#lien_apropos
+{opacity:0;
+  animation: apparition 1.5s ease-in-out 3s forwards;
+}
+
+  #lien_competences
+  {
+    opacity:0;
+    animation: apparition 1.5s ease-in-out 4s forwards;
+  }
+ 
+ 
+  
+ 
+ 
+  
+#lien_portfolio
+{
+
+  letter-spacing: 0.3rem;
+  opacity:0;
+    animation: apparition 1.5s ease-in-out 5s forwards;
+  }
+
+  #lien_contact
+  {
+    opacity:0;
+    animation: apparition 1.5s ease-in-out 6s forwards; 
+  }
+ 
+    @keyframes apparition {
+      0%  
+       {
+         opacity:0; 
+      }
+      100% 
+      { 
+         opacity:1;
+       }
+      }
+
+
+
+#lien_apropos:hover, #lien_contact:hover
+{
+ 
+   
+}
 
 /********************
 **    navbar       **
@@ -96,13 +277,68 @@ color: white ;
 #icon
 {
 display: none;
+width: 50px;
+height: auto;
 }
 
 .display_flex
 {
 display: flex!important;
+
 }
 
+/********************
+**   a propos      **
+********************/
+#apropos
+{
+display: flex;
+flex-direction: row;
+margin: 5% 15%;
+}
+
+.presentation 
+{
+margin: 10% 5%;
+text-align: justify;
+padding:  5px;
+}
+
+#profil
+{
+  width: 37vh;
+}
+
+#apropos h3
+{
+  font-size: 1.5rem;
+  
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(240, 7, 58)), to(rgb(7, 2, 0)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  
+}
+.presentation p
+{
+  padding:  6% 0 ;
+  line-height:1.6 ;
+  text-align: justify;
+  margin-right: 100px;
+
+}
+#button_cv 
+{
+position: relative;
+top: 25px;
+background:rgb(170, 2, 39);
+padding: 5px 50px;
+border-radius:5px ;
+color: white;
+
+text-decoration: none;
+}
 /********************
 **   PORTFOLIO     **
 ********************/
@@ -113,7 +349,7 @@ display: flex!important;
 
 .galerie_portfolio
 {
-margin:5% 20%;
+margin:5% 15%;
 justify-content: center;
 }
 
@@ -142,10 +378,15 @@ img
 {
  width: 100%;
  height: auto;
-
 }
 
-
+@media  (min-width: 740px) and (max-width: 1200px){
+  .img_min
+{
+ width: 25vw;
+ height: auto;
+}
+}
 
 
 

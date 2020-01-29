@@ -10,18 +10,19 @@
 </head>
 <body>
 <section id="apropos">
-
+<div class ="presentation"> 
 <img src="img/baldur.jpg"  alt="photo de profil" id="profil">
-<div class ="presentation">
+</div>
+<div class = "presentation" > 
 <h3 > À   PROPOS DE MOI</h3>
-<p class = "present">  
-    Je suis Nadège Mokdad, 36 bougies sur le gâteau .Initialement issue du milieu de la vente et des Métiers du Livre, je pars aujourd'hui à la découverte de nouveaux horizons professionnels.
+    <p>Je suis Nadège Mokdad, 36 bougies sur le gâteau .Initialement issue du milieu de la vente et des Métiers du Livre, je pars aujourd'hui à la découverte de nouveaux horizons professionnels.
     Mes loisirs  et mon interêt pour  le numérique et les activités à dimension créative  m'ont conduit(e) cette année l'Access Code School de Belfort afin d'y apprendre le métier de Web designer et obtenir le 
     Titre Professionnel qui lui est associé.
-    J'aime également pratiquer la saponnification à froid et les chats.
+    J'aime également les chats et pratiquer la saponnification à froid.</p>
     <h3>EN SAVOIR PLUS SUR MON PARCOURS PROFESSIONNEL</h3>
-    <p>Mon CV est consultable et téléchargeable</p>
-    <a class="button_cv" href="cv_nm.pdf">ICI</a>
+   <p>Mon CV est consultable et téléchargeable</p>
+   
+   <a id="button_cv" href="cv_nm.pdf">ICI</a>
   </div>
 
 
