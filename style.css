@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -28,9 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -49,7 +47,12 @@ table {
 
 body
 {
+
+    line-height: 1;
+    background-image: url('img/full-bloom.png');
+  
 font-family: 'Poppins', sans-serif;
+
 }
 
 /********************
@@ -84,7 +87,7 @@ font-family: 'Poppins', sans-serif;
   overflow: hidden;
   height: 100%;
   bottom: -1px;
-  background: linear-gradient(45deg,   #cab7dbfb,#e4a1b034);
+  background: linear-gradient(45deg,rgb(202, 105, 184),  rgb(173, 146, 167), rgb(108, 66, 245));
   background-size: 400% 400%;
   animation: gradient 40s ease infinite;
 }
@@ -157,7 +160,7 @@ font-size: 4rem;
 text-align:center;
 top: 12vh;
 opacity:0;
-animation: apparition 1.5s ease-in-out 1s forwards;
+animation: apparition 0.7s ease-in-out 1s forwards;
 }
 
 
@@ -200,13 +203,13 @@ margin: 1% 18%;
 }
 #lien_apropos
 {opacity:0;
-  animation: apparition 1.5s ease-in-out 3s forwards;
+  animation: apparition 0.7s ease-in-out 2s forwards;
 }
 
   #lien_competences
   {
     opacity:0;
-    animation: apparition 1.5s ease-in-out 4s forwards;
+    animation: apparition 0.7s ease-in-out 3s forwards;
   }
  
  
@@ -219,13 +222,13 @@ margin: 1% 18%;
 
   letter-spacing: 0.3rem;
   opacity:0;
-    animation: apparition 1.5s ease-in-out 5s forwards;
+    animation: apparition 0.7s ease-in-out 4s forwards;
   }
 
   #lien_contact
   {
     opacity:0;
-    animation: apparition 1.5s ease-in-out 6s forwards; 
+    animation: apparition 0.7s ease-in-out 5s forwards; 
   }
  
     @keyframes apparition {
@@ -241,11 +244,6 @@ margin: 1% 18%;
 
 
 
-#lien_apropos:hover, #lien_contact:hover
-{
- 
-   
-}
 
 /********************
 **    navbar       **
@@ -292,9 +290,10 @@ display: flex!important;
 ********************/
 #apropos
 {
+
 display: flex;
 flex-direction: row;
-margin: 5% 15%;
+margin: 5% 12%;
 }
 
 .presentation 
@@ -306,14 +305,16 @@ padding:  5px;
 
 #profil
 {
-  width: 37vh;
+  position: relative;
+  top: 10%;
+  width:25vh;
 }
 
-#apropos h3
+ h3
 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   
-  background: -webkit-gradient(linear, left top, right bottom, from(rgb(240, 7, 58)), to(rgb(7, 2, 0)));
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(167, 95, 173)), to(rgb(8, 8, 8)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -325,32 +326,83 @@ padding:  5px;
   padding:  6% 0 ;
   line-height:1.6 ;
   text-align: justify;
-  margin-right: 100px;
+  margin-right: 60px;
 
 }
-#button_cv 
+.boutons_presentation
+{
+  display: flex;
+  
+
+}
+.button
 {
 position: relative;
 top: 25px;
-background:rgb(170, 2, 39);
+background:rgb(139, 73, 128);
 padding: 5px 50px;
 border-radius:5px ;
 color: white;
+margin: 20px;
 
 text-decoration: none;
+}
+/********************
+**  competenecs    **
+********************/
+.competences
+{
+  margin: 3% 15%;
+
+}
+.titre_comp
+{
+ margin: 5% 0;
+}
+.bloc_logo
+{
+  
+  display: flex;
+  flex-direction: row;
+ 
+  align-items: center;
+  
+}
+
+
+.logo
+{
+  display: flex ;
+  flex-direction: column;
+  text-align: center;
+  width: 8vw;
+  height:auto; 
+  margin: 10px 30px;
+
+}
+
+.img_logo
+{
+  width: 100%;
+  margin-bottom:20px ;
+}
+.retour_button
+{
+  margin-left: 45%;
 }
 /********************
 **   PORTFOLIO     **
 ********************/
 .intro_portfolio
 {
-  margin: 50px 0;
+  margin: 40px 0;
+  font-size: 1.2rem;
 }
 
 .galerie_portfolio
 {
-margin:5% 15%;
-justify-content: center;
+margin:5% ;
+
 }
 
 .zone_img
@@ -360,14 +412,17 @@ justify-content: center;
 flex-direction: row!important;
 justify-content: center;
 flex-wrap: wrap;
+margin-left: 10%;
 }
 
 .img_min
 {
   filter: grayscale(100%) brightness(0.3) ;
-  width: 14vw;
+  width: 25vw;
   height:auto; 
-  margin: 50px;
+  margin-top: 3%;
+ 
+
 }
 .img_min:hover
 {
@@ -376,15 +431,120 @@ flex-wrap: wrap;
 }
 img
 {
- width: 100%;
+ width: 65%;
  height: auto;
+
+ 
+}
+h4
+{
+  font-weight: bold;
+  margin: 10% 22%;
+}
+  .description
+  {
+
+margin :10% 5% ;
+width: 70%;
+  }
+  
+.niveau1:hover .niveau2 {
+	display: block; 
+}
+
+.niveau1:hover  {
+	background-color : black ;
+}
+
+/********************
+**  contact        **
+********************/
+.page_contact
+{
+
+margin: 3%;
+
+}
+
+form
+{
+margin: 3% 25%;
+padding:  5% ;
+display: flex;
+flex-direction: column;
+ background-color: rgba(165, 137, 167, 0.7);
+ border-radius:  30px;
+ box-shadow:5px 5px 15px;
+
+}
+
+.form-group
+{
+  display : flex;
+  align-items: flex-start;
+  margin: 2.5%;
+
+
+
+}
+label
+{
+ width: 50%;
+color: black ;
+}
+
+input, textarea
+{
+
+width: 100%;
+}
+ 
+textarea
+{
+  height:150px ;
+}
+
+input
+{
+  height: 25px;
+}
+
+.btn-send
+{
+  margin-bottom: 20px;
+font-family: 'Poppins', sans-serif;
+  border: none;
+ width: 30%;
+padding: 20px 0;
+line-height: 0.2;
+margin: 5% 35% ;
+ 
+}
+#retour_contact
+{
+  width: 30%;
+  margin-left:37% ;
+}
+.text-muted
+{
+margin-top: 10%;
+}
+
+.help-block.with-errors {
+
+  margin-top: 5px;
+}
+
+#message{
+  text-align: right;
 }
 
 @media  (min-width: 740px) and (max-width: 1200px){
   .img_min
 {
- width: 25vw;
+ width:35vw;
  height: auto;
+
 }
 }
 
@@ -449,3 +609,8 @@ cursor: pointer;
 
 
 }
+
+
+
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio formilaire</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  
+</head>
+<body>
+
+
+<!--Contact Form-->
+<div class="container">
+  
+     
+          <h2>Contact</h2>
+          <form id="contact-form" method="post" action="contact.php" role="form">
+              <div class="messages"></div>
+              <div class="controls">
+                
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_name"></label>
+                              <input id="form_name" type="text" name="name" class="form-control"
+                                  placeholder="Entrer votre Prénom *" required="required"
+                                  data-error="Veuillez entrer votre Prénom.">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      
+                          <div class="form-group">
+                              <label for="form_lastname">Nom *</label>
+                              <input id="form_lastname" type="text" name="surname" class="form-control"
+                                  placeholder="Entrer votre Nom *" required="required"
+                                  data-error="Veuillez entrer votre Nom.">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      
+                  </div>
+                  
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_email">Email *</label>
+                              <input id="form_email" type="email" name="email" class="form-control"
+                                  placeholder="Entrer une adresse mail valide *" required="required"
+                                  data-error="Veuillez entrer une adresse mail.">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_need">Veuillez préciser votre message *</label>
+                              <select id="form_need" name="need" class="form-control" required="required"
+                                  data-error="Veuillez préciser votre message">
+                                  <option value=""></option>
+                                  <option value="Request quotation">Renseignements</option>
+                                  <option value="Request order status">Autres</option>
+                              </select>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                              <label for="form_message">Message *</label>
+                              <textarea id="form_message" name="message" class="form-control"
+                                  placeholder="Votre Message *" rows="4" required="required"
+                                  data-error="Veuillez écrire votre message."></textarea>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <input type="submit" class="btn btn-success btn-send" value="Envoyer">
+                          
+                          
+                      </div
+                      >
+                  </div>
+              
+              <div class="row">
+                  <div class="col-md-12">
+                      <p id="message" class="text-muted"><strong>*</strong> Les champs sont obligatoires.
+                  </div>
+          </form>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+<!--Social-->  
+  <div id="social">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-4">
+          <a target="_blank" href="https://twitter.com/Ro0tb"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="https://www.linkedin.com/in/jean-vincentz-b1230a185/"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="https://github.com/JeanVincentz"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Copyright-->  
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        &copy; Copyrights <strong>2019 - 2020</strong>
+      </p>
+      <div class="credits">
+        <a href=""></a>
+      </div>
+    </div>
+  </div>
+
+
+<!--JS Librairies + js formulaire-->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
