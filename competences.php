@@ -9,6 +9,7 @@
     <title>Compétences</title>
 </head>
 <body>
+<?php include('header.php'); ?>
     <div class="competences">
     <h3>COMPÉTENCES </h3>
     <h4 class="titre_comp">Langages de progammation et technologies abordés en formation</h4>
@@ -54,7 +55,7 @@
       <p class='nom_lang'>ILLUSTRATOR</p>
     </div>
     </div>
-    <a class="button retour_button" href="index.html">RETOUR</a>
+    
 </div>
   </div>
     </div>

@@ -16,13 +16,14 @@
     <header>
         <nav class="navbar">
             <ul class="navigation" id="nav_resp">
-                <li><a href="index.html" class="onglets aff_menu">Acceuil</a></li>
-                <li><a href="a_propos.php" class="onglets">A propos </a></li>
-                <li><a href="competences.php" class="onglets"> Competences</a></li>
-                <li><a href="contact.php" class="onglets">Contact</a></li>
+                <li><a href="index.html" class="onglets aff_menu">ACCUEIL</a></li>
+                <li><a href="a_propos.php" class="onglets"> À PROPOS </a></li>
+                <li><a href="competences.php" class="onglets">COMPÉTENCES</a></li>
+                <li><a href="portfolio.php" class="onglets">PORTFOLIO</a></li>
+                <li><a href="contact.php" class="onglets">CONTACT</a></li>
 
             </ul>
-            <img src="img/burger.png" alt=" icone burger" id="icon">
+            <img src="img/burger" alt="menu" id="icon">
 
         </nav>
     </header>

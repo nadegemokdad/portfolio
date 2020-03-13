@@ -4,7 +4,7 @@
 */
 
 html, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -58,7 +58,27 @@ font-family: 'Poppins', sans-serif;
 /********************
 **    index        **
 ********************/
+/*general*/
+h1
+{
+font-size: 3rem;
+text-align:center;
+top: 6vh;
+opacity:0;
+animation: apparition 0.3s ease-in-out 0.25s forwards; 
+}
 
+h3
+{
+  font-size: 2.5rem;
+  
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(167, 95, 173)), to(rgb(8, 8, 8)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  
+}
 /* fond animé*/
 
 @keyframes move_wave {
@@ -124,7 +144,7 @@ font-family: 'Poppins', sans-serif;
   transform-origin: center bottom;
 }
 .waveTop {
-  background-size: 50% 100px;
+  background-size: 100% 100px;
 }
 .waveAnimation .waveTop {
 animation: move-wave 3s;
@@ -133,16 +153,16 @@ animation: move-wave 3s;
  animation-delay: 1s;
 }
 .waveMiddle {
-  background-size: 50% 120px;
+  background-size: 100% 100px;
 }
 .waveAnimation .waveMiddle {
-  animation: move_wave 10s linear infinite;
+  animation: move_wave 5s linear infinite;
 }
 .waveBottom {
-  background-size: 50% 100px;
+  background-size: 100% 100px;
 }
 .waveAnimation .waveBottom {
-  animation: move_wave 15s linear infinite;
+  animation: move_wave 10s linear infinite;
 }
 
 /* texte*/
@@ -154,16 +174,6 @@ margin-bottom : 5%;
 z-index: 5;
 
 }
-h1
-{
-font-size: 4rem;
-text-align:center;
-top: 12vh;
-opacity:0;
-animation: apparition 0.7s ease-in-out 1s forwards;
-}
-
-
 
 
 .container_index
@@ -174,7 +184,6 @@ margin-top : 10% ;
 }
 
 
-
 .categories_index
 { 
 
@@ -182,12 +191,6 @@ text-decoration: none;
 color: rgb(0, 0, 0);
 font-size: 2.rem;
 }
-
-
-
-
-
-
 
 .lien_centre
 {
@@ -203,13 +206,13 @@ margin: 1% 18%;
 }
 #lien_apropos
 {opacity:0;
-  animation: apparition 0.7s ease-in-out 2s forwards;
+  animation: apparition 0.3s ease-in-out 0.5s forwards;
 }
 
   #lien_competences
   {
     opacity:0;
-    animation: apparition 0.7s ease-in-out 3s forwards;
+    animation: apparition 0.3s ease-in-out 1s forwards;
   }
  
  
@@ -222,13 +225,13 @@ margin: 1% 18%;
 
   letter-spacing: 0.3rem;
   opacity:0;
-    animation: apparition 0.7s ease-in-out 4s forwards;
+    animation: apparition 0.3s ease-in-out 1.5s forwards;
   }
 
   #lien_contact
   {
     opacity:0;
-    animation: apparition 0.7s ease-in-out 5s forwards; 
+    animation: apparition 0.3s ease-in-out 2s forwards; 
   }
  
     @keyframes apparition {
@@ -243,34 +246,29 @@ margin: 1% 18%;
       }
 
 
-
-
 /********************
 **    navbar       **
 ********************/
-
-
 .navigation
 {
-  
+  width: 100%;
   display:flex ;
   justify-content:flex-end;
   align-items: center;
   height: 8vh;
-  background-color: black;
-
+  background:#573852;
 }
 
 .onglets
 {
 text-decoration: none;   
-color: wheat; 
+color: whitesmoke; 
 font-size: 1rem;
 padding: 0 20px;
 }
 .onglets:hover
 {
-color: white ;
+color: rgb(155, 152, 152) ;
 }
 #icon
 {
@@ -310,17 +308,7 @@ padding:  5px;
   width:25vh;
 }
 
- h3
-{
-  font-size: 2.5rem;
-  
-  background: -webkit-gradient(linear, left top, right bottom, from(rgb(167, 95, 173)), to(rgb(8, 8, 8)));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-
-  
-}
 .presentation p
 {
   padding:  6% 0 ;
@@ -340,10 +328,10 @@ padding:  5px;
 position: relative;
 top: 25px;
 background:rgb(139, 73, 128);
-padding: 5px 50px;
+padding : 1% 5% ;
 border-radius:5px ;
 color: white;
-margin: 20px;
+
 
 text-decoration: none;
 }
@@ -353,6 +341,7 @@ text-decoration: none;
 .competences
 {
   margin: 3% 15%;
+
 
 }
 .titre_comp
@@ -368,7 +357,6 @@ text-decoration: none;
   align-items: center;
   
 }
-
 
 .logo
 {
@@ -468,6 +456,7 @@ margin: 3%;
 
 form
 {
+
 margin: 3% 25%;
 padding:  5% ;
 display: flex;
@@ -501,6 +490,7 @@ width: 100%;
  
 textarea
 {
+  font-family: 'Poppins', sans-serif; 
   height:150px ;
 }
 
@@ -551,7 +541,104 @@ margin-top: 10%;
 
 
 @media  (max-width: 740px){
-/*portfolio*/
+
+  /*general*/
+h1
+{
+font-size: 2,5rem !important;
+}
+
+
+h3
+{
+font-size: 1.5rem;
+text-align : center !important;
+line-height: 1.5;
+padding-right: 20px  ;
+}
+
+h4
+{
+  text-align : center;
+  margin: 35px 0;
+}
+/* index*/
+.waveTop, .waveMiddle, .waveBottom
+ {
+  background-size: 100% 50px;
+}
+
+.container_index
+{
+  margin-top: 20%;
+}
+
+/* a propos*/
+#profil
+{
+  width: 80% ;
+}
+#apropos{
+ display:flex;
+ flex-direction: column;
+align-items: center;
+ margin-right: 0!important;
+
+}
+
+.presentation
+{
+ width: 80vw;
+ margin-top: 0;
+}
+
+.boutons_presentation
+{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  text-align : center;
+}
+
+.button
+{
+margin-right: 20px ;
+
+}
+ 
+/* competences*/
+
+.bloc_logo
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+
+}
+
+.logo
+{
+  display: flex;
+  justify-content: center;
+}
+
+.img_logo
+{
+width: 15vw ;
+align-items: center;
+
+}
+
+.nom_lang
+{
+  display: flex;
+
+}
+
+
+  /*portfolio*/
 .img_min
 {
  width: 45vw;
@@ -564,26 +651,29 @@ h2, .intro_portfolio, .text1
 }
 /*navbar*/
 
-  .navbar  
-{ 
-display: flex;
-flex-direction: column-reverse;
-position: relative;
+
+
+
+.description
+{
+width: 100%;
 }
 
-
-.navigation
+#nav_resp
 {
-    display:none;
-    flex-direction: column;
+    display: block ;
+    flex-direction: column!important;
     text-align: left;
     position: absolute;
     height: auto;
-    top: 100%;
-    background-color: black;
+    top: -50%;
+  width: 30vw;
     justify-content: flex-start;
+    z-index: 1000 ;
 }
-
+.grrr{
+  top: 55px !important;
+}
 li
 {
 padding: 15px ;
@@ -593,6 +683,8 @@ align-self: flex-start;
 #icon
 {
 display : block;
+height: 50px !important ;
+width: auto;
 }
 
 #icon:hover

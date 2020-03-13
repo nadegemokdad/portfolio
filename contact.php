@@ -11,6 +11,8 @@
   <title>Formulaire de contact</title>
 </head>
 <body>
+<?php include('header.php'); ?>
+
 <div class=" page_contact">
   <h3> Pour me contacter</h3>
  
@@ -63,8 +65,8 @@
                       </div>
                       <div class="col-md-12">
                           <div class="contact_button">
-                          <input type="submit"  class="btn btn-success btn-send button button" value="Envoyer">
-                          <a class="button" id="retour_contact" href="index.html">RETOUR</a></p>
+                          <input type="submit"  class="btn btn-success btn-send button button" value="ENVOYER">
+                          </p>
                         </div>
                       </div
                       >
